@@ -1,5 +1,5 @@
 // ===== GAUS TECH DASHBOARD V2 =====
-
+import { db } from "./firebase.js";
 // Live Clock
 function updateDateTime() {
     const now = new Date();
