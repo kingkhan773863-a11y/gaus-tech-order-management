@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAUS TECH - Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h2>GAUS TECH ORDER MANAGEMENT</h2>
+
+    <div class="header-right">
+        <span id="dateTime"></span>
+
+        <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+        </button>
+    </div>
+</header>
+
+<section class="cards">
+
+<div class="card total">
+<h3>Total Orders</h3>
+<h1 id="totalOrders">0</h1>
+</div>
+
+<div class="card pending">
+<h3>Pending</h3>
+<h1 id="pendingOrders">0</h1>
+</div>
+
+<div class="card processing">
+<h3>Processing</h3>
+<h1 id="processingOrders">0</h1>
+</div>
+
+<div class="card ready">
+<h3>Ready</h3>
+<h1 id="readyOrders">0</h1>
+</div>
+
+</section>
+
+<section class="toolbar">
+
+<input
+type="text"
+id="searchOrder"
+placeholder="Search Order...">
+
+<button class="add-btn">
+<i class="fas fa-plus"></i>
+Add Order
+</button>
+
+</section>
+
+<section class="table-section">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+<th>Customer</th>
+<th>Product</th>
+<th>Qty</th>
+<th>Status</th>
+<th>Assign To</th>
+<th>Date</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="orderTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Add Order Popup -->
+<div id="orderPopup">
+   <div class="popup-box">
+    <h2>Add New Order</h2>
+
+    <input type="text" id="orderId" placeholder="Order ID">
+    <input type="text" id="customerName" placeholder="Customer Name">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="qty" placeholder="Quantity">
+
+    <select id="status">
+        <option>Pending</option>
+        <option>Processing</option>
+        <option>Ready</option>
+    </select>
+<select id="assignTo">
+    <option value="Sahil">Sahil</option>
+<option value="Gufran">Gufran</option>
+<option value="Meraj">Meraj</option>
+<option value="Prabhu">Prabhu</option>
+<option value="Sahil 2">Sahil 2</option></option>
+</select>
+    <div class="popup-btn">
+        <button id="saveOrder">Save</button>
+        <button id="closePopup">Cancel</button>
+    </div>
+</div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
